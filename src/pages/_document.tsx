@@ -1,15 +1,20 @@
-import NextDocument, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 
-class Document extends NextDocument {
+class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await NextDocument.getInitialProps(ctx);
+    const initialProps = await Document.getInitialProps(ctx);
     return initialProps;
   }
 
   render() {
     return (
-      <Html lang='ja' dir='ltr'>
-        <Head></Head>
+      <Html lang="ja" dir="ltr">
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
@@ -19,4 +24,4 @@ class Document extends NextDocument {
   }
 }
 
-export default Document;
+export default MyDocument;

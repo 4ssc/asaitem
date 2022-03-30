@@ -2,14 +2,16 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   mode: 'jit',
-  purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    fontFamily: {
-      ja: [...defaultTheme.fontFamily.sans],
-      en: [...defaultTheme.fontFamily.sans],
-    },
     extend: {
+      container: {
+        center: true,
+        padding: '1rem',
+      },
+      fontFamily: {
+        Noto_Sans: ['Noto Sans JP'],
+      },
       colors: {
         theme: {
           light: '#ffffff',
@@ -24,8 +26,5 @@ module.exports = {
     },
   },
 
-  variants: {
-    extend: {},
-  },
   plugins: [],
 };

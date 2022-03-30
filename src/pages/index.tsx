@@ -1,13 +1,11 @@
+import GlobalLayout from '../components/layout/global_layout';
+
 const Home = (): JSX.Element => {
   return (
-    <div>
-      <main>
-        <h1>
-          Welcome to Next.js!
-        </h1>
-      </main>
-    </div>
-  )
-}
+    <GlobalLayout>
+      aaaa
+    </GlobalLayout>
+  );
+};
 
 export default Home;
